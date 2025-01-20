@@ -1,0 +1,90 @@
+<div class=" mx-4 md:mx-24 flex flex-col gap-10">
+  <!-- ABOOUT -->
+  <div id="home" class="flex flex-col-reverse md:flex-row justify-between gap-3 tracked-div">
+    <div class="w-full md:w-[50%] h-auto md:h-[40rem] flex flex-col justify-center items-start gap-4">
+      <div>
+        <span class="px-3 py-1 bg-blue-950 rounded-md tracking-[.25em] text-base"> RULLY ADMIRAL</span>
+      </div>
+      <h1 class="text-[24px] md:text-[47px] text-primary font-bold">
+        I'M A
+        <span class="typing-effect"></span>
+        DEVELOPER
+      </h1>
+      <div class="text-justify text-sm md:text-xl">
+        I’m the powerhouse behind the curtain, engineering rock-solid, scalable systems that make apps work like
+        magic. From
+        crafting efficient APIs to optimizing databases, I thrive on solving complex problems. And when the
+        frontend needs a
+        hand, I’m there to sprinkle some style and functionality. Let’s turn ideas into seamless digital
+        experiences! 🚀✨
+      </div>
+
+      <div class="w-full flex flex-row gap-3">
+        <p-card class="card">
+          <h3 class="text-2xl font-bold">2+</h3>
+          <span class="text-sm">Years Experience</span>
+        </p-card>
+        <p-card class="card">
+          <h3 class="text-2xl font-bold">10+</h3>
+          <span class="text-sm">Repository Projects</span>
+        </p-card>
+      </div>
+
+      <div class="text-lg">
+        <a rel="noopener" href="https://www.linkedin.com/in/rully-admiral-1aa315287/" target="_blank">
+          <i
+            class="pi pi-linkedin brand-icon linkedin transition-transform duration-300 transform hover:scale-110 "></i>
+        </a>
+        <a rel="noopener" href="https://github.com/admiral215" target="_blank">
+          <i class="pi pi-github github brand-icon transition-transform duration-300 transform hover:scale-110"></i>
+        </a>
+        <a rel="noopener" href="https://www.instagram.com/admrlld/" target="_blank">
+          <i
+            class="pi pi-instagram brand-icon instagram transition-transform duration-300 transform hover:scale-110"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="w-full md:w-[50%] flex justify-center items-center md:mt-6">
+      <img src="assets/images/foto.webp" alt="" class="w-40 h-4w-40 md:w-72 md:h-72 rounded-full">
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div id="projects" class="tracked-div" >
+    <div class="mb-3">
+      <span class="px-3 py-1 bg-blue-950 rounded-md tracking-[.25em] text-base"> PROJECTS</span>
+    </div>
+    <p-carousel [value]="$myRepo | async" [numVisible]="3" [numScroll]="3" [circular]="true"
+      [responsiveOptions]="responsiveCarousel" autoplayInterval="5000" >
+      <ng-template let-repo #item>
+        <a target="_blank" href="{{repo.url}}" class="">
+          <div class="border border-grey bg-secondary rounded m-2 p-4 flex flex-row gap-3 items-center w-[330px] md:w-[400px] transition-transform duration-300 transform hover:scale-[1.03]">
+            <div>
+              <div class="text-2xl md:text-5xl">
+                <i class="pi pi-github"></i>
+              </div>
+            </div>
+            <div>
+              <div class="mb-1 font-semibold uppercase truncate max-w-[240px] md:max-w-[300px]">{{ repo.name }}</div>
+              <div class="text-sm truncate max-w-[240px] md:max-w-[300px]">{{ repo.description }}</div>
+            </div>
+          </div>
+        </a>
+
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <div id="skills" class="tracked-div">
+    <app-galaxy></app-galaxy>
+  </div>
+
+  <div class="h-96">
+
+  </div>
+</div>
+
+
+
+

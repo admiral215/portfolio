@@ -1,0 +1,40 @@
+.brand-icon {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid var(--px-white);
+  margin-right: 8px;
+  font-size: 1.5rem;
+  position: relative;
+  transition: ease top .35s;
+  top: 0;
+}
+
+.linkedin {
+  background-color: #0077B5;
+}
+
+.github {
+  background-color: #172554;
+  color: white;
+}
+
+.instagram {
+  background: linear-gradient(#9B4DCA, #F58529, #F7B731, #F8A508);
+  background-size: 400% 400%;
+}
+
+.card {
+  width: 176px;
+  background: #172554;
+  border: 1px solid rgba(255, 255, 255, .15);
+  display: flex;
+  flex-direction: column;
+  color: var(--px-white);
+  border-radius: 8px;
+  padding: 20px;
+}
+

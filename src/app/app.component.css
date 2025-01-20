@@ -1,0 +1,16 @@
+#body-wrapper {
+  height: auto;
+  overflow: visible;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  /* Atur margin 0 untuk layar HP */
+  #body-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

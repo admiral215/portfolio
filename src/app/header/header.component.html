@@ -1,0 +1,41 @@
+
+<div id="header" class="w-full sticky top-0 bg-transparent z-50">
+  <header class="mx-3 md:mx-24 justify-between ">
+    <div class="flex justify-between items-center py-5">
+      <div class="logo">
+        <a href="#" class="navbar-brand">
+          <img src="assets/images/logo.webp" alt="Logo" class="hidden xl:block logo-light w-48" />
+          <img src="assets/images/logo.webp" alt="Logo" class="block xl:hidden logo-light w-44" />
+        </a>
+      </div>
+
+      <div class="relative xl:hidden">
+        <button pButton type="button" icon="pi pi-bars" class="toggler-menu" (click)="toggleMenu()"></button>
+      </div>
+
+      <div *ngIf="menuVisible" class="top-full w-full left-0 absolute ml-0 bg-blue-950 px-4 py-3">
+        <ul class="flex flex-col gap-5">
+          @for (item of items; track $index) {
+          <li>
+            <a [ngClass]="{ active: isActive(item) }" (click)="setActive(item.fragment, $event)" [href]="item.fragment"
+              class="text-lg font-semibold menu-item">{{ item.label }}</a>
+          </li>
+          }
+        </ul>
+      </div>
+
+      <div class="hidden xl:flex items-center space-x-16">
+        <ul class="flex space-x-6 md:flex">
+          @for (item of items; track $index) {
+          <li>
+            <a [ngClass]="{ active: isActive(item) }" (click)="setActive(item.fragment, $event)" [href]="item.fragment"
+              class="text-lg font-semibold menu-item">{{ item.label }}</a>
+          </li>
+          }
+        </ul>
+        <a href="javascript:"
+          class="px-6 py-2 bg-primary text-white rounded-full hidden md:inline-flex hover:bg-blue-700">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+</div>

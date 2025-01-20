@@ -1,0 +1,4 @@
+{
+    "prettier.printWidth": 100,
+    "yaml.format.printWidth": 100
+}

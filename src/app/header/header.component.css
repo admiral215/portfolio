@@ -1,0 +1,54 @@
+.toggler-menu {
+  font-size: 25px;
+  background-color: transparent;
+  color: var(--px-white);
+  border: 1px solid rgba(255, 255, 255, .2) !important;
+  border-radius: 5px;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 1;
+  position: relative;
+  margin-left: 15px;
+}
+
+::ng-deep .p-panelmenu .p-panelmenu-panel{
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 5px;
+}
+
+::ng-deep .p-panelmenu .p-panelmenu-panel.active{
+  @apply text-primary
+}
+
+.menu-item {
+  @apply relative inline-block text-lg font-semibold;
+}
+
+.menu-item.active{
+  @apply text-primary
+}
+
+.menu-item::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-[2px] bg-primary;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.5s ease;
+}
+
+.menu-item:hover::after,
+.menu-item.active::after {
+  transform: scaleX(1);
+  /* Menambahkan transformasi untuk garis bawah */
+}
+
+.menu-item:hover {
+  @apply text-primary;
+}
+
+header.sticky {
+  height: auto;
+}
+
+
