@@ -16,6 +16,7 @@
             "outputPath": "dist/portofolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/portfolio",
             "polyfills": [
               "zone.js"
             ],
@@ -38,7 +39,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "800kB",
                   "maximumError": "1MB"
                 },
                 {
@@ -92,6 +93,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
